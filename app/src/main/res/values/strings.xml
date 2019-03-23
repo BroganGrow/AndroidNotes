@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">LearnGraphics</string>
+
+    <string name="paint">Paint</string>
+    <string name="canvas">Canvas</string>
+    <string name="rect">Rect</string>
+    <string name="path">Path</string>
 </resources>
