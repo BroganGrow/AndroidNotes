@@ -7,6 +7,8 @@ import android.view.View;
 
 import com.brainbg.learngraphics.R;
 
+import java.nio.file.Path;
+
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     @Override
@@ -31,6 +33,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 startActivity(new Intent(MainActivity.this, CanvasActivity.class));
                 break;
             case R.id.btn_path:
+                startActivity(new Intent(MainActivity.this, PathActivity.class));
                 break;
             case R.id.btn_rect:
                 break;

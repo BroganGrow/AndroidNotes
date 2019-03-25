@@ -19,6 +19,7 @@ public class LearnPaintView extends View {
     private int mHeight;
     int paddingLeft;
     int paddingTop;
+
     int paddingRight;
     int paddingBottom;
 
