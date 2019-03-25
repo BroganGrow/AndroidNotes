@@ -19,6 +19,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".act.PaintActivity"/>
+        <activity android:name=".act.CanvasActivity"/>
     </application>
 
 </manifest>

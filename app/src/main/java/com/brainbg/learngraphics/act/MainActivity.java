@@ -28,6 +28,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 startActivity(new Intent(MainActivity.this, PaintActivity.class));
                 break;
             case R.id.btn_canvas:
+                startActivity(new Intent(MainActivity.this, CanvasActivity.class));
                 break;
             case R.id.btn_path:
                 break;
