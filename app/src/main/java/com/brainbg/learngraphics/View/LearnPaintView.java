@@ -38,7 +38,8 @@ public class LearnPaintView extends View {
 //        mPaint.setStyle(Paint.Style.FILL);
 //        mPaint.setColor(Color.CYAN);
         mPaint.setColor(getResources().getColor(R.color.BrainbgColor));
-        mPaint.setAntiAlias(true);//抗锯齿
+        mPaint.setAntiAlias(true);//抗锯
+        
     }
 
     @Override

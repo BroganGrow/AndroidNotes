@@ -185,28 +185,43 @@ public class LearnPathView extends View {
 
         //不闭合
         Path pathLines1 = new Path();
-        pathLines1.moveTo(250,2400);
+        pathLines1.moveTo(250,2400+paddingTop);
         pathLines1.lineTo(50,2600);
         pathLines1.lineTo(450,2600);
-        pathLines1.close();
 
         mPaint.setStyle(Paint.Style.STROKE);
         mPaint.setStrokeWidth(5);
         canvas.drawPath(pathLines1,mPaint);
-        drawRightDescr(canvas, 2500 + paddingTop, "直线路径");
+        drawRightDescr(canvas, 2500 + paddingTop, "直线路径，不闭合");
 
         //闭合
         Path pathLines2 = new Path();
-        pathLines2.moveTo(250,2400);
-        pathLines2.lineTo(50,2600);
-        pathLines2.lineTo(450,2600);
+        pathLines2.moveTo(250,2600+paddingTop);
+        pathLines2.lineTo(50,2800);
+        pathLines2.lineTo(450,2800);
         pathLines2.close();
 
         mPaint.setStyle(Paint.Style.STROKE);
         mPaint.setStrokeWidth(5);
         canvas.drawPath(pathLines2,mPaint);
-        drawRightDescr(canvas, 2500 + paddingTop, "直线路径");
+        drawRightDescr(canvas, 2700 + paddingTop, "直线路径，闭合");
 
+        //闭合
+        Path pathLines3 = new Path();
+        pathLines3.moveTo(250,2800+paddingTop);
+        pathLines3.lineTo(100,3000);
+        pathLines3.lineTo(400,2900);
+        pathLines3.lineTo(100,2900);
+        pathLines3.lineTo(100,2900);
+        pathLines3.lineTo(400,3000);
+
+
+        pathLines3.close();
+
+        mPaint.setStyle(Paint.Style.STROKE);
+        mPaint.setStrokeWidth(5);
+        canvas.drawPath(pathLines3,mPaint);
+        drawRightDescr(canvas, 2900 + paddingTop, "五角星，闭合");
     }
 
     /**
