@@ -135,11 +135,11 @@ public class LearnPathView extends View {
         //------------------------圆角矩形路径---------------------------
         drawCenterDescr(canvas, 900 + paddingTop, "圆角矩形路径");
 
+        //统一圆角
         Path pathRoundRect1 = new Path();
         RectF rectFRoundRect = new RectF(50, 1000 + paddingTop, 500, 1200);
         pathRoundRect1.addRoundRect(rectFRoundRect,50,50,Path.Direction.CW);
 
-        //统一圆角
         mPaint.setStyle(Paint.Style.STROKE);
         mPaint.setStrokeWidth(5);
         canvas.drawPath(pathRoundRect1, mPaint);
@@ -162,7 +162,6 @@ public class LearnPathView extends View {
         Path pathCircle = new Path();
         pathCircle.addCircle(250,1700,100,Path.Direction.CW);
 
-        //统一圆角
         mPaint.setStyle(Paint.Style.STROKE);
         mPaint.setStrokeWidth(5);
         canvas.drawPath(pathCircle, mPaint);
@@ -206,7 +205,7 @@ public class LearnPathView extends View {
         canvas.drawPath(pathLines2,mPaint);
         drawRightDescr(canvas, 2700 + paddingTop, "直线路径，闭合");
 
-        //闭合
+        //五角星,闭合
         Path pathLines3 = new Path();
         pathLines3.moveTo(250,2800+paddingTop);
         pathLines3.lineTo(100,3000);
@@ -214,8 +213,6 @@ public class LearnPathView extends View {
         pathLines3.lineTo(100,2900);
         pathLines3.lineTo(100,2900);
         pathLines3.lineTo(400,3000);
-
-
         pathLines3.close();
 
         mPaint.setStyle(Paint.Style.STROKE);
