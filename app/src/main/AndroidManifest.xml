@@ -21,6 +21,7 @@
         <activity android:name=".act.PaintActivity"/>
         <activity android:name=".act.CanvasActivity"/>
         <activity android:name=".act.PathActivity"/>
+        <activity android:name=".act.TextActivity" />
     </application>
 
 </manifest>

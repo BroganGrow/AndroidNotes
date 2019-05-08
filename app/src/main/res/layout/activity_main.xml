@@ -22,6 +22,11 @@
         android:layout_height="wrap_content"
         android:text="@string/path" />
     <Button
+        android:id="@+id/btn_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/text" />
+    <Button
         android:id="@+id/btn_rect"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

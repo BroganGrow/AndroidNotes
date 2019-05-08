@@ -19,6 +19,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.btn_paint).setOnClickListener(this);
         findViewById(R.id.btn_canvas).setOnClickListener(this);
         findViewById(R.id.btn_path).setOnClickListener(this);
+        findViewById(R.id.btn_text).setOnClickListener(this);
         findViewById(R.id.btn_rect).setOnClickListener(this);
 
     }
@@ -34,6 +35,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.btn_path:
                 startActivity(new Intent(MainActivity.this, PathActivity.class));
+                break;
+            case R.id.btn_text:
+
+                startActivity(new Intent(MainActivity.this, TextActivity.class));
                 break;
             case R.id.btn_rect:
                 break;

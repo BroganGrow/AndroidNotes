@@ -1,8 +1,9 @@
 <resources>
     <string name="app_name">LearnGraphics</string>
 
-    <string name="paint">Paint</string>
-    <string name="canvas">Canvas</string>
+    <string name="paint">Paint画笔</string>
+    <string name="canvas">Canvas画布</string>
     <string name="rect">Rect</string>
-    <string name="path">Path</string>
+    <string name="path">Path路径</string>
+    <string name="text">Text文字</string>
 </resources>
