@@ -1,11 +1,6 @@
-# Android 知识点学习
+# LearnAndroid-MVP-Frame
 
-## Graphics
-[图形处理](https://github.com/Brainbg/LearnAndroid/tree/LearnGraphics)
+单独克隆LearnAndroid-MVP-Frame项目
+$ git clone -b MVP git@github.com:Brainbg/LearnAndroid.git
 
-## 项目框架
-[MVC](https://github.com/Brainbg/LearnAndroid/tree/LearnGraphics)  
-
-[MVP](https://github.com/Brainbg/LearnAndroid/tree/LearnGraphics)  
-
-[MVVM](https://github.com/Brainbg/LearnAndroid/tree/LearnGraphics)  
+## [LearnAndroid 总目录](https://github.com/Brainbg/LearnAndroid)
