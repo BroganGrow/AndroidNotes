@@ -6,6 +6,6 @@
 ## 项目框架
 [MVC](https://github.com/Brainbg/LearnAndroid/tree/LearnGraphics)  
 
-[MVP](https://github.com/Brainbg/LearnAndroid/tree/LearnGraphics)  
+[MVP](https://github.com/Brainbg/LearnAndroid/tree/MVP)  
 
 [MVVM](https://github.com/Brainbg/LearnAndroid/tree/LearnGraphics)  
