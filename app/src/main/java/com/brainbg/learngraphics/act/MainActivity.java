@@ -7,8 +7,6 @@ import android.view.View;
 
 import com.brainbg.learngraphics.R;
 
-import java.nio.file.Path;
-
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     @Override

@@ -3,6 +3,7 @@ package com.brainbg.learngraphics.View;
 import android.content.Context;
 import android.content.res.Resources;
 import android.graphics.Canvas;
+import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Path;
 import android.graphics.RectF;
@@ -15,7 +16,7 @@ import com.brainbg.learngraphics.R;
 
 public class LearnTextView extends View {
     private static final String TAG = LearnTextView.class.getSimpleName();
-    private Paint mPaint,mPaintx;
+    private Paint mPaint;
     private int mWidth;
     private int mHeight;
     int paddingLeft;
@@ -36,12 +37,11 @@ public class LearnTextView extends View {
         super(context, attrs, defStyleAttr);
 
         mPaint = new Paint();
-        mPaintx = new Paint();
+
 
         mPaint.setColor(getResources().getColor(R.color.BrainbgColor));
-        mPaintx.setColor(getResources().getColor(R.color.BrainbgColor));
         mPaint.setAntiAlias(true);//启用抗锯齿，但渲染速度会变慢
-        mPaintx.setAntiAlias(true);//启用抗锯齿，但渲染速度会变慢
+
     }
 
     @Override
@@ -104,7 +104,7 @@ public class LearnTextView extends View {
         mPaint.setStrokeWidth(5);
         mPaint.setTextSize(dp2px(16));
         mPaint.setTextAlign(Paint.Align.LEFT);
-        canvas.drawText("吾虽浪迹天涯，却未迷失本心",50,300+ paddingTop,mPaint);
+        canvas.drawText("吾虽浪迹天涯，却未迷失本心", 50, 300 + paddingTop, mPaint);
         drawRightDescr(canvas, 300 + paddingTop, "左对齐，填充");
 
 
@@ -112,41 +112,91 @@ public class LearnTextView extends View {
         mPaint.setStrokeWidth(2);
         mPaint.setTextSize(dp2px(16));
         mPaint.setTextAlign(Paint.Align.CENTER);
-        canvas.drawText("且随疾风前行，身后亦须留心",360,500+ paddingTop,mPaint);
+        canvas.drawText("且随疾风前行，身后亦须留心", 360, 500 + paddingTop, mPaint);
         drawRightDescr(canvas, 500 + paddingTop, "居中对齐，描边");
 
         mPaint.setStyle(Paint.Style.FILL_AND_STROKE);
         mPaint.setStrokeWidth(3);
         mPaint.setTextSize(dp2px(16));
         mPaint.setTextAlign(Paint.Align.RIGHT);
-        canvas.drawText("荣耀存于心，而非留于形",580,700+ paddingTop,mPaint);
+        canvas.drawText("荣耀存于心，而非留于形", 580, 700 + paddingTop, mPaint);
         drawRightDescr(canvas, 700 + paddingTop, "右对齐，填充且描边");
 
-        mPaintx.setStyle(Paint.Style.FILL);
-        mPaintx.setStrokeWidth(13);
-        mPaintx.setTextSize(dp2px(16));
-        mPaintx.setTextAlign(Paint.Align.LEFT);
-        mPaintx.setFakeBoldText(true);//粗体
-        mPaintx.setUnderlineText(true);//下划线
-        mPaintx.setStrikeThruText(true);//删除线
-        canvas.drawText("汝欲赴死,易如反掌",50,900+ paddingTop,mPaintx);
+        mPaint.setStyle(Paint.Style.FILL);
+        mPaint.setStrokeWidth(13);
+        mPaint.setTextSize(dp2px(16));
+        mPaint.setTextAlign(Paint.Align.LEFT);
+        mPaint.setFakeBoldText(true);//粗体
+        mPaint.setUnderlineText(true);//下划线
+        mPaint.setStrikeThruText(true);//删除线
+        canvas.drawText("汝欲赴死,易如反掌", 50, 900 + paddingTop, mPaint);
         drawRightDescr(canvas, 900 + paddingTop, "粗体、下划线、删除线");
 
         mPaint.setStyle(Paint.Style.FILL);
         mPaint.setStrokeWidth(3);
         mPaint.setTextSize(dp2px(16));
         mPaint.setTextAlign(Paint.Align.LEFT);
-        mPaint.setTextSkewX((float)-0.25);
-        canvas.drawText("荣耀存于心，而非留于形",50,1100+ paddingTop,mPaint);
+        mPaint.setTextSkewX((float) -0.25);
+        canvas.drawText("荣耀存于心，而非留于形", 50, 1100 + paddingTop, mPaint);
         drawRightDescr(canvas, 1100 + paddingTop, "右斜：-0.25");
 
         mPaint.setStyle(Paint.Style.FILL);
         mPaint.setStrokeWidth(3);
         mPaint.setTextSize(dp2px(16));
         mPaint.setTextAlign(Paint.Align.LEFT);
-        mPaint.setTextSkewX((float)0.25);
-        canvas.drawText("荣耀存于心，而非留于形",50,1300+ paddingTop,mPaint);
+        mPaint.setTextSkewX((float) 0.25);
+        canvas.drawText("荣耀存于心，而非留于形", 50, 1300 + paddingTop, mPaint);
         drawRightDescr(canvas, 1300 + paddingTop, "左斜：0.25");
+
+
+        mPaint.setStyle(Paint.Style.FILL);
+        mPaint.setStrokeWidth(3);
+        mPaint.setTextSize(dp2px(16));
+        mPaint.setFakeBoldText(true);//粗体
+        mPaint.setTextAlign(Paint.Align.LEFT);
+        mPaint.setTextScaleX(1);
+        canvas.drawText("荣耀存于心", 50, 1500 + paddingTop, mPaint);
+        drawRightDescr(canvas, 1500 + paddingTop, "水平拉伸2倍");
+
+        mPaint.setStyle(Paint.Style.FILL);
+        mPaint.setColor(getResources().getColor(R.color.colorAccent));
+        mPaint.setStrokeWidth(3);
+        mPaint.setTextSize(dp2px(16));
+        mPaint.setTextAlign(Paint.Align.LEFT);
+        mPaint.setTextScaleX(2);
+        canvas.drawText("荣耀存于心", 50, 1500 + paddingTop, mPaint);
+        drawRightDescr(canvas, 1500 + paddingTop, "水平拉伸2倍");
+
+        mPaint.setStyle(Paint.Style.FILL);
+        mPaint.setStrokeWidth(3);
+        mPaint.setTextSize(dp2px(16));
+        mPaint.setTextAlign(Paint.Align.LEFT);
+        float[] pos = {50, 1700, 150, 1730, 250, 1760, 350, 1790};
+        canvas.drawPosText("荣耀存于", pos, mPaint);
+        drawRightDescr(canvas, 1700 + paddingTop, "指定文字位置");
+
+
+        mPaint.setStyle(Paint.Style.FILL);
+        mPaint.setStrokeWidth(3);
+        mPaint.setTextSize(dp2px(16));
+        Path circlePath = new Path();
+        circlePath.addCircle(250, 2000, 100, Path.Direction.CW);
+        canvas.drawPath(circlePath, mPaint);
+        mPaint.setColor(Color.GREEN);
+        canvas.drawTextOnPath("吾虽浪迹天涯，却未迷失本心",circlePath,0 ,-20,mPaint);
+        drawRightDescr(canvas, 2000 + paddingTop, "沿路径绘,顺时针");
+
+
+
+        mPaint.setStyle(Paint.Style.FILL);
+        mPaint.setStrokeWidth(3);
+        mPaint.setTextSize(dp2px(16));
+        Path circlePath1 = new Path();
+        circlePath1.addCircle(250, 2400, 100, Path.Direction.CCW);
+        canvas.drawPath(circlePath1, mPaint);
+        mPaint.setColor(Color.GREEN);
+        canvas.drawTextOnPath("吾虽浪迹天涯，却未迷失本心",circlePath1,0,50,mPaint);
+        drawRightDescr(canvas, 2400 + paddingTop, "沿路径绘,逆时针");
     }
 
     /**
@@ -157,10 +207,16 @@ public class LearnTextView extends View {
      * @param descr
      */
     private void drawRightDescr(Canvas canvas, float y, String descr) {
-        mPaint.setStyle(Paint.Style.FILL);
-        mPaint.setTextAlign(Paint.Align.RIGHT);
-        mPaint.setTextSize(sp2px((float) 12));
-        mPaint.setFakeBoldText(true);
+        //重置属性
+        mPaint.setUnderlineText(false);//下划线
+        mPaint.setStrikeThruText(false);//删除线
+        mPaint.setTextSkewX((float) 0);//倾斜度
+        mPaint.setFakeBoldText(true);//粗体
+        mPaint.setTextScaleX(1);//水平拉伸
+        mPaint.setColor(getResources().getColor(R.color.BrainbgColor));//颜色
+        mPaint.setStyle(Paint.Style.FILL);//填充
+        mPaint.setTextAlign(Paint.Align.RIGHT);//靠右
+        mPaint.setTextSize(sp2px((float) 12));//字体大小
         canvas.drawText(descr, mWidth - paddingRight, y, mPaint);
     }
 
