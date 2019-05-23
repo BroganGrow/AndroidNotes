@@ -7,6 +7,7 @@ import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Path;
 import android.graphics.RectF;
+import android.graphics.Typeface;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.View;
@@ -183,9 +184,18 @@ public class LearnTextView extends View {
         circlePath.addCircle(250, 2000, 100, Path.Direction.CW);
         canvas.drawPath(circlePath, mPaint);
         mPaint.setColor(Color.GREEN);
-        canvas.drawTextOnPath("吾虽浪迹天涯，却未迷失本心",circlePath,0 ,-20,mPaint);
+        canvas.drawTextOnPath("吾虽浪迹天涯，却未迷", circlePath, 0, 0, mPaint);
         drawRightDescr(canvas, 2000 + paddingTop, "沿路径绘,顺时针");
 
+        mPaint.setStyle(Paint.Style.FILL);
+        mPaint.setStrokeWidth(3);
+        mPaint.setTextSize(dp2px(16));
+        Path circlePathx = new Path();
+        circlePathx.addCircle(580, 2000, 100, Path.Direction.CW);
+        canvas.drawPath(circlePathx, mPaint);
+        mPaint.setColor(Color.GREEN);
+        canvas.drawTextOnPath("吾虽浪迹天涯，却未迷", circlePathx, 150, 0, mPaint);
+        drawRightDescr(canvas, 2000 + paddingTop, "沿路径绘,顺时针");
 
 
         mPaint.setStyle(Paint.Style.FILL);
@@ -195,8 +205,30 @@ public class LearnTextView extends View {
         circlePath1.addCircle(250, 2400, 100, Path.Direction.CCW);
         canvas.drawPath(circlePath1, mPaint);
         mPaint.setColor(Color.GREEN);
-        canvas.drawTextOnPath("吾虽浪迹天涯，却未迷失本心",circlePath1,0,50,mPaint);
+        canvas.drawTextOnPath("风萧萧兮 ", circlePath1, 0, 0, mPaint);
         drawRightDescr(canvas, 2400 + paddingTop, "沿路径绘,逆时针");
+
+        mPaint.setStyle(Paint.Style.FILL);
+        mPaint.setStrokeWidth(3);
+        mPaint.setTextSize(dp2px(16));
+        Path circlePath1x = new Path();
+        circlePath1x.addCircle(580, 2400, 100, Path.Direction.CW);
+        canvas.drawPath(circlePath1x, mPaint);
+        mPaint.setColor(Color.GREEN);
+        canvas.drawTextOnPath("吾虽浪迹天涯 ", circlePath1x, 0, 0, mPaint);
+        drawRightDescr(canvas, 2400 + paddingTop, "沿路径绘,逆时针");
+
+        mPaint.setStyle(Paint.Style.FILL);
+        mPaint.setStrokeWidth(5);
+        mPaint.setTextSize(dp2px(16));
+        mPaint.setTextAlign(Paint.Align.LEFT);
+
+        String name = "繁体";
+        Typeface font = Typeface.create(name, Typeface.NORMAL);
+        mPaint.setTypeface(font);
+
+        canvas.drawText("吾虽浪迹天涯，却未迷失本心", 50, 2600 + paddingTop, mPaint);
+        drawRightDescr(canvas, 2600 + paddingTop, "左对齐，填充");
     }
 
     /**
@@ -218,7 +250,10 @@ public class LearnTextView extends View {
         mPaint.setTextAlign(Paint.Align.RIGHT);//靠右
         mPaint.setTextSize(sp2px((float) 12));//字体大小
         canvas.drawText(descr, mWidth - paddingRight, y, mPaint);
+
+
     }
+
 
     /**
      * 中间描述
