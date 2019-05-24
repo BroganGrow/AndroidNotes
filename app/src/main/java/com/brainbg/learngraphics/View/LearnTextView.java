@@ -1,6 +1,7 @@
 package com.brainbg.learngraphics.View;
 
 import android.content.Context;
+import android.content.res.AssetManager;
 import android.content.res.Resources;
 import android.graphics.Canvas;
 import android.graphics.Color;
@@ -223,12 +224,45 @@ public class LearnTextView extends View {
         mPaint.setTextSize(dp2px(16));
         mPaint.setTextAlign(Paint.Align.LEFT);
 
-        String name = "繁体";
+        String name = "宋体";
         Typeface font = Typeface.create(name, Typeface.NORMAL);
         mPaint.setTypeface(font);
 
         canvas.drawText("吾虽浪迹天涯，却未迷失本心", 50, 2600 + paddingTop, mPaint);
-        drawRightDescr(canvas, 2600 + paddingTop, "左对齐，填充");
+        drawRightDescr(canvas, 2600 + paddingTop, "系统字体");
+
+
+        mPaint.setStyle(Paint.Style.FILL);
+        mPaint.setStrokeWidth(5);
+        mPaint.setTextSize(dp2px(20));
+        mPaint.setTextAlign(Paint.Align.LEFT);
+        AssetManager am=getContext().getAssets();
+        Typeface fromAsset = Typeface.createFromAsset(am, "fonts/ALGER.TTF");
+        mPaint.setTypeface(fromAsset);
+        canvas.drawText("Brainbg `s Blog", 50, 2800 + paddingTop, mPaint);
+        drawRightDescr(canvas, 2800 + paddingTop, "自定义字体-ALGER.TTF");
+
+
+        mPaint.setStyle(Paint.Style.FILL);
+        mPaint.setStrokeWidth(5);
+        mPaint.setTextSize(dp2px(20));
+        mPaint.setTextAlign(Paint.Align.LEFT);
+        AssetManager am1=getContext().getAssets();
+        Typeface fromAsset1 = Typeface.createFromAsset(am1, "fonts/BAUHS93.TTF");
+        mPaint.setTypeface(fromAsset1);
+        canvas.drawText("Brainbg `s Blog", 50, 3000 + paddingTop, mPaint);
+        drawRightDescr(canvas, 3000 + paddingTop, "自定义字体-BAUHS93.TTF");
+
+
+        mPaint.setStyle(Paint.Style.FILL);
+        mPaint.setStrokeWidth(5);
+        mPaint.setTextSize(dp2px(24));
+        mPaint.setTextAlign(Paint.Align.LEFT);
+        AssetManager am2=getContext().getAssets();
+        Typeface fromAsset2 = Typeface.createFromAsset(am2, "fonts/STXINGKA.TTF");
+        mPaint.setTypeface(fromAsset2);
+        canvas.drawText("白雨的博客", 50, 3200 + paddingTop, mPaint);
+        drawRightDescr(canvas, 3200 + paddingTop, "自定义字体-STXINGKA.TTF");
     }
 
     /**
@@ -240,6 +274,10 @@ public class LearnTextView extends View {
      */
     private void drawRightDescr(Canvas canvas, float y, String descr) {
         //重置属性
+        String name = "宋体";
+        Typeface font = Typeface.create(name, Typeface.NORMAL);
+        mPaint.setTypeface(font);
+
         mPaint.setUnderlineText(false);//下划线
         mPaint.setStrikeThruText(false);//删除线
         mPaint.setTextSkewX((float) 0);//倾斜度
