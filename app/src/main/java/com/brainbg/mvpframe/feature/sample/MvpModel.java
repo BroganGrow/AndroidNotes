@@ -1,8 +1,8 @@
-package com.brainbg.mvpframe.model;
+package com.brainbg.mvpframe.feature.sample;
 
 import android.os.Handler;
 
-import com.brainbg.mvpframe.callback.MvpCallback;
+import com.brainbg.mvpframe.feature.sample.MvpCallback;
 
 public class MvpModel {
 

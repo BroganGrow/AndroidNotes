@@ -1,4 +1,4 @@
-package com.brainbg.mvpframe.callback;
+package com.brainbg.mvpframe.feature.sample;
 
 public interface MvpCallback {
 

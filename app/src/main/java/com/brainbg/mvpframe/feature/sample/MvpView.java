@@ -1,4 +1,4 @@
-package com.brainbg.mvpframe.View;
+package com.brainbg.mvpframe.feature.sample;
 
 import com.brainbg.mvpframe.base.BaseView;
 

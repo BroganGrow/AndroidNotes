@@ -1,12 +1,10 @@
-package com.brainbg.mvpframe.activity;
+package com.brainbg.mvpframe.feature.sample;
 
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
 import com.brainbg.mvpframe.R;
-import com.brainbg.mvpframe.presenter.MvpPresenter;
-import com.brainbg.mvpframe.View.MvpView;
 import com.brainbg.mvpframe.base.BaseActivity;
 
 public class MainActivity extends BaseActivity implements MvpView {

@@ -1,8 +1,5 @@
-package com.brainbg.mvpframe.presenter;
+package com.brainbg.mvpframe.feature.sample;
 
-import com.brainbg.mvpframe.callback.MvpCallback;
-import com.brainbg.mvpframe.model.MvpModel;
-import com.brainbg.mvpframe.View.MvpView;
 import com.brainbg.mvpframe.base.BasePresenter;
 
 public class MvpPresenter extends BasePresenter<MvpView> {
