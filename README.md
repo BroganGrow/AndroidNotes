@@ -17,7 +17,7 @@ git checkout NDK-First
   - MVVM
 - Graphics 图形处理
   - [Graphics](https://github.com/Brainbg/AndroidNotes/tree/Graphics)
-  - NDK/JNI 
+- NDK/JNI 调用C/C++
   - [NDK-First](https://github.com/Brainbg/AndroidNotes/tree/NDK-First)
 
 
