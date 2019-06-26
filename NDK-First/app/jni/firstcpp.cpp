@@ -7,5 +7,5 @@
 
 JNIEXPORT jstring JNICALL
 Java_com_brainbg_ndkfirst_JNIUtils_getDataFromCPP(JNIEnv *env, jclass jclass) {
-    return env->NewStringUTF("This is my first jni from CPP!");
+    return env->NewStringUTF("This is my first jni from C++!");
 }

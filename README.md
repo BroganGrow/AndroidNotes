@@ -11,13 +11,14 @@ git checkout NDK-First
 ```
 
 ## -->目录
-- Architecture 项目构架
+- [Design Pattern 设计模式](https://github.com/Brainbg/AndroidNotes/tree/Design-Pattern)
+- architecture 构架
   - MVC 
   - [MVP](https://github.com/Brainbg/LearnAndroid/tree/MVP)  
   - MVVM
-- Graphics 图形处理
+- Graphics 图形
   - [Graphics](https://github.com/Brainbg/AndroidNotes/tree/Graphics)
-- NDK/JNI 调用C/C++
+- NDK/JNI
   - [NDK-First](https://github.com/Brainbg/AndroidNotes/tree/NDK-First)
 
 
