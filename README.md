@@ -3,7 +3,7 @@
 Android 开发笔记整理，主要来源于博客中的Demo。
 
 ## 类型
-
+- [Design Pattern 设计模式](https://github.com/Brainbg/AndroidNotes/tree/Design-Pattern)
 - architecture 构架
   - MVC 
   - [MVP](https://github.com/Brainbg/LearnAndroid/tree/MVP)  
