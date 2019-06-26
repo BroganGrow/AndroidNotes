@@ -1,47 +1,27 @@
-# AndroidNotes
+# Design Pattern 设计模式
 
-Android 开发笔记整理，主要来源于博客中的Demo。
+- 相关文章
+  - [GitHub]()
+  - [简书]()
+  - [CSDN]()
+- 使用项目
+```cmd
+git clone git@github.com:Brainbg/AndroidNotes.git
+git checkout Design-Pattern
+```
 
-## 类型
-
-- architecture 构架
+## -->目录
+- Architecture 项目构架
   - MVC 
   - [MVP](https://github.com/Brainbg/LearnAndroid/tree/MVP)  
   - MVVM
-- Graphics 图形
+- Graphics 图形处理
   - [Graphics](https://github.com/Brainbg/AndroidNotes/tree/Graphics)
-- NDK/JNI
+- NDK/JNI 调用C/C++
   - [NDK-First](https://github.com/Brainbg/AndroidNotes/tree/NDK-First)
 
-## 下载 Demo
-
-```
-git clone git@github.com:Brainbg/AndroidNotes.git
-```
-
-```
-git checkout 分支名 
-```
-## 介绍
-> 作者：Brainbg(白雨)  
-> GitHub：https://github.com/Brainbg   
-> 博客：https://www.brainbg.com/    
-> 简书：https://www.jianshu.com/u/94518ede7100   
-> CSDN：https://blog.csdn.net/u014720022  
-## License
 
 
-    Copyright 2019 Brainbg
 
-    Licensed under the Apache License, Version 2.0 (the "License");
-    you may not use this file except in compliance with the License.
-    You may obtain a copy of the License at
-
-       http://www.apache.org/licenses/LICENSE-2.0
-
-    Unless required by applicable law or agreed to in writing, software
-    distributed under the License is distributed on an "AS IS" BASIS,
-    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-    See the License for the specific language governing permissions and
-    limitations under the License.
+   
 
