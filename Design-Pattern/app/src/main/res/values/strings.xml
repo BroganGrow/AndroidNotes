@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Design-Pattern</string>
+    <string name="SimpleFactoryPattern">简单工厂模式(SimpleFactoryPattern)</string>
 </resources>

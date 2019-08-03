@@ -19,4 +19,5 @@ public class StaticSingleton {
     public static StaticSingleton getInstance() {
         return SingletonHolder.instance;
     }
+
 }
