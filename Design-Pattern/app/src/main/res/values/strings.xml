@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">Design-Pattern</string>
+    <string name="SimpleFactoryPattern">简单工厂模式(SimpleFactoryPattern)</string>
+    <string name="FactoryPattern">工厂模式(FactoryPattern)</string>
+    <string name="AbstractFactoryPattern">抽象工厂模式(AbstractFactoryPattern)</string>
 </resources>

@@ -2,8 +2,8 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
     android:overScrollMode="never"
+    android:layout_height="match_parent"
     tools:context=".MainActivity">
 
     <LinearLayout
@@ -12,36 +12,43 @@
         android:orientation="vertical">
 
         <Button
-            android:id="@+id/btn_simple_factory"
+            android:id="@+id/btn_produce_apple"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="15dp"
             android:layout_marginTop="15dp"
             android:layout_marginRight="15dp"
-            android:text="@string/SimpleFactoryPattern"
+            android:text="苹果工厂生产→苹果数据线"
             android:textAllCaps="false" />
 
         <Button
-            android:id="@+id/btn_factory"
+            android:id="@+id/btn_produce_android"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="15dp"
-            android:layout_marginTop="15dp"
             android:layout_marginRight="15dp"
-            android:text="@string/FactoryPattern"
+            android:text="安卓工厂生产→安卓数据线"
             android:textAllCaps="false" />
 
-        <Button
-            android:id="@+id/btn_abstact_factory"
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="15dp"
-            android:layout_marginTop="15dp"
+            android:layout_marginTop="10dp"
             android:layout_marginRight="15dp"
-            android:text="@string/AbstractFactoryPattern"
-            android:textAllCaps="false" />
+            android:text="生产批次:"
+            android:textColor="@color/colorPrimary"
+            android:textSize="15sp" />
 
-
+        <TextView
+            android:id="@+id/tv_produce_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="15dp"
+            android:textColor="@android:color/black"
+            android:textSize="15sp" />
     </LinearLayout>
 
 </ScrollView>
