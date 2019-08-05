@@ -10,7 +10,7 @@ package com.brainbg.designpattern.simpleFactory;
  */
 public class AndroidDataLine extends DataLine {
     @Override
-    public String produce() {
+    public String produceDataLine() {
         return "生产了一批安卓(Android)数据线 \n";
     }
 }

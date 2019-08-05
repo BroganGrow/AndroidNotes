@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:overScrollMode="never"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/btn_produce_apple"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="15dp"
+            android:text="工厂A生产→苹果数据线/快速充电器"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/btn_produce_android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:text="工厂B生产→安卓数据线/普通充电器"
+            android:textAllCaps="false" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="15dp"
+            android:text="生产批次:"
+            android:textColor="@color/colorPrimary"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/tv_produce_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="15dp"
+            android:textColor="@android:color/black"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:overScrollMode="never"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="15dp"
+                android:layout_marginLeft="15dp"
+                android:text="CPU："
+                android:textColor="@android:color/black"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/et_cpu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="15dp"
+                android:layout_marginRight="15dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="15dp"
+                android:layout_marginLeft="15dp"
+                android:text="主板："
+                android:textColor="@android:color/black"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/et_mainboard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="15dp"
+                android:layout_marginRight="15dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="15dp"
+                android:layout_marginLeft="15dp"
+                android:text="显卡："
+                android:textColor="@android:color/black"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/et_graphics_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="15dp"
+                android:layout_marginRight="15dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="15dp"
+                android:layout_marginLeft="15dp"
+                android:text="硬盘："
+                android:textColor="@android:color/black"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/et_hard_disk"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="15dp"
+                android:layout_marginRight="15dp" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_produce_apple"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="15dp"
+            android:text="组装电脑"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/btn_clear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:text="@string/clear"
+            android:textAllCaps="false" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="15dp"
+            android:text="组装结果:"
+            android:textColor="@color/colorPrimary"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/tv_produce_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="15dp"
+            android:textColor="@android:color/black"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+</ScrollView>

@@ -1,4 +1,4 @@
-package com.brainbg.designpattern.simpleFactory;
+package com.brainbg.designpattern.abstractFactory;
 
 /**
  * <pre>
@@ -9,5 +9,5 @@ package com.brainbg.designpattern.simpleFactory;
  * </pre>
  */
 public abstract class DataLine {
-    public abstract String produceDataLine();
+    public abstract String produceLine();
 }

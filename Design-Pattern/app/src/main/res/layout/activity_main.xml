@@ -11,37 +11,43 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
+        <TextView
+            android:text="@string/CreationalPattern"
+            style="@style/TextViewStyle" />
+
         <Button
             android:id="@+id/btn_simple_factory"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="15dp"
-            android:layout_marginTop="15dp"
-            android:layout_marginRight="15dp"
             android:text="@string/SimpleFactoryPattern"
-            android:textAllCaps="false" />
+            style="@style/ButtonStyle" />
 
         <Button
             android:id="@+id/btn_factory"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="15dp"
-            android:layout_marginTop="15dp"
-            android:layout_marginRight="15dp"
             android:text="@string/FactoryPattern"
-            android:textAllCaps="false" />
+            style="@style/ButtonStyle" />
 
         <Button
             android:id="@+id/btn_abstact_factory"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="15dp"
-            android:layout_marginTop="15dp"
-            android:layout_marginRight="15dp"
             android:text="@string/AbstractFactoryPattern"
-            android:textAllCaps="false" />
+            style="@style/ButtonStyle" />
+
+        <Button
+            android:id="@+id/btn_builder"
+            android:text="@string/BuilderPattern"
+            style="@style/ButtonStyle" />
+
+        <Button
+            android:id="@+id/btn_prototype"
+            android:text="@string/PrototypePattern"
+            style="@style/ButtonStyle" />
+
+        <TextView
+            android:text="@string/StructuralPattern"
+            style="@style/TextViewStyle" />
 
 
+        <TextView
+            android:text="@string/BehaviorPattern"
+            style="@style/TextViewStyle" />
     </LinearLayout>
 
 </ScrollView>

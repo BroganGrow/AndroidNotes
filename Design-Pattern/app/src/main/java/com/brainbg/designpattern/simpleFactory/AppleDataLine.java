@@ -10,7 +10,7 @@ package com.brainbg.designpattern.simpleFactory;
  */
 public class AppleDataLine extends DataLine {
     @Override
-    public String produce() {
+    public String produceDataLine() {
         return "生产了一批苹果(Apple)数据线 \n";
     }
 }

@@ -13,7 +13,7 @@ import com.brainbg.designpattern.R;
  *     author : Brainbg
  *     e-mail : brainbg@foxmail
  *     time   : 2019/08/03
- *     desc   : 简单工厂模式使用
+ *     desc   : 工厂模式使用
  * </pre>
  */
 public class FactoryActivity extends AppCompatActivity implements View.OnClickListener {
