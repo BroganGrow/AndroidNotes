@@ -1,0 +1,53 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion rootProject.ext.android["compileSdkVersion"]
+    buildToolsVersion rootProject.ext.android["buildToolsVersion"]
+    defaultConfig {
+        applicationId "com.brainbg.componentization"
+        minSdkVersion rootProject.ext.android["minSdkVersion"]
+        targetSdkVersion rootProject.ext.android["targetSdkVersion"]
+        versionCode rootProject.ext.android["versionCode"]
+        versionName rootProject.ext.android["versionName"]
+        testInstrumentationRunner rootProject.ext.android["testInstrumentationRunner"]
+
+        //ARouter配置
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [AROUTER_MODULE_NAME: project.getName()]
+            }
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    testImplementation rootProject.ext.dependencies["junit"]
+    androidTestImplementation rootProject.ext.dependencies["androidx.test:runner"]
+    androidTestImplementation rootProject.ext.dependencies["androidx.test.espresso"]
+
+    annotationProcessor rootProject.ext.dependencies["arouter-compiler"]
+
+    //模块开关
+    implementation project(path: ':lib:common')
+    if (isNeedHomeModule.toBoolean()) {
+        implementation project(':module_home')
+    }
+    if (isNeedContactModule.toBoolean()) {
+        implementation project(':module_contact')
+    }
+    if (isNeedFindModule.toBoolean()) {
+        implementation project(':module_find')
+    }
+    if (isNeedMineModule.toBoolean()) {
+        implementation project(':module_mine')
+    }
+
+}

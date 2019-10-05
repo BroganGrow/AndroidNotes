@@ -1,0 +1,10 @@
+include ':app',
+        ':lib:base',
+        ':lib:common',
+        ':module_home',
+        ':module_mine',
+        ':module_contact',
+        ':module_find'
+
+
+rootProject.name = 'Componentization'
