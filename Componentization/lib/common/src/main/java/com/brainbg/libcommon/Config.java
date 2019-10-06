@@ -8,5 +8,5 @@ package com.brainbg.libcommon;
  *     desc   :
  * </pre>
  */
-public class ApiCenter {
+public class Config {
 }
