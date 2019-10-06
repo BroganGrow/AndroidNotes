@@ -27,26 +27,14 @@ android {
 }
 
 dependencies {
-//    implementation fileTree(dir: 'libs', include: ['*.jar'])
-
-//    testImplementation rootProject.ext.dependencies["junit"]
-//    androidTestImplementation rootProject.ext.dependencies["androidx.test:runner"]
-//    androidTestImplementation rootProject.ext.dependencies["androidx.test.espresso"]
-
     annotationProcessor rootProject.ext.dependencies["arouter-compiler"]
 
-    //模块开关
     implementation project(path: ':lib:common')
-    if (!isNeedHomeModule.toBoolean()) {
+    //模块开关
+    if (!isModule) {
         implementation project(':module_home')
-    }
-    if (!isNeedContactModule.toBoolean()) {
         implementation project(':module_contact')
-    }
-    if (!isNeedFindModule.toBoolean()) {
         implementation project(':module_find')
-    }
-    if (!isNeedMineModule.toBoolean()) {
         implementation project(':module_mine')
     }
 
