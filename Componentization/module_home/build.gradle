@@ -1,18 +1,15 @@
-if(!isNeedHomeModule.toBoolean()){
+if (isNeedHomeModule.toBoolean()) {
     apply plugin: 'com.android.application'
-}else {
+} else {
     apply plugin: 'com.android.library'
 }
-
 
 android {
     compileSdkVersion 28
     buildToolsVersion "29.0.2"
-
-
     defaultConfig {
-        if(!isNeedHomeModule.toBoolean()){
-          applicationId "com.brainbg.home"
+        if (isNeedHomeModule.toBoolean()) {
+            applicationId "com.brainbg.home"
         }
         minSdkVersion 15
         targetSdkVersion 28
@@ -37,17 +34,33 @@ android {
         }
     }
 
+    //java插件引入了一个概念叫做SourceSets，通过修改SourceSets中的属性，
+    // 可以指定哪些源文件（或文件夹下的源文件）要被编译，
+    //哪些源文件要被排除。
+    sourceSets {
+        main {
+            if (isNeedHomeModule.toBoolean()) {//apk
+                manifest.srcFile 'src/main/manifest/AndroidManifest.xml'
+            } else {
+                manifest.srcFile 'src/main/AndroidManifest.xml'
+
+                //library模式下，排除java/debug文件夹下的所有文件
+                java {
+                    exclude '*module'
+                }
+            }
+        }
+    }
+
+
+    //设置了resourcePrefix值后，所有的资源名必须以指定的字符串做前缀，否则会报错。
+    //但是resourcePrefix这个值只能限定xml里面的资源，并不能限定图片资源，所有图片资源仍然需要手动去修改资源名。
+    //双重约束
+    resourcePrefix "home_"
 }
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
-
-    testImplementation rootProject.ext.dependencies["junit"]
-    androidTestImplementation rootProject.ext.dependencies["androidx.test:runner"]
-    androidTestImplementation rootProject.ext.dependencies["androidx.test.espresso"]
-
     implementation project(path: ':lib:common')
-
     annotationProcessor rootProject.ext.dependencies["arouter-compiler"]
 
 }

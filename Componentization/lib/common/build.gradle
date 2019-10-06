@@ -32,13 +32,20 @@ android {
 }
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
+//    implementation fileTree(dir: 'libs', include: ['*.jar'])
+//    api rootProject.ext.dependencies["androidx.appcompat"]
+//    api rootProject.ext.dependencies["androidx.constraintlayout"]
+//    testImplementation rootProject.ext.dependencies["junit"]
+//    androidTestImplementation rootProject.ext.dependencies["androidx.test:runner"]
+//    androidTestImplementation rootProject.ext.dependencies["androidx.test.espresso"]
 
+    //api 代替 implementation ，允许外部模块访问。
     api rootProject.ext.dependencies["androidx.appcompat"]
+    api fileTree(dir: 'libs', include: ['*.jar'])
     api rootProject.ext.dependencies["androidx.constraintlayout"]
-    testImplementation rootProject.ext.dependencies["junit"]
-    androidTestImplementation rootProject.ext.dependencies["androidx.test:runner"]
-    androidTestImplementation rootProject.ext.dependencies["androidx.test.espresso"]
+    api rootProject.ext.dependencies["junit"]
+    api rootProject.ext.dependencies["androidx.test:runner"]
+    api rootProject.ext.dependencies["androidx.test.espresso"]
 
     //ARouter
     api 'com.alibaba:arouter-api:1.4.1'

@@ -1,4 +1,4 @@
-//需要去build.gradle中添加 apply from: "config.gradle"
+//必须在 build.gradle 中添加 apply from: "config.gradle"
 ext {
     android = [compileSdkVersion        : 28,
                buildToolsVersion        : "29.0.2",
@@ -14,6 +14,7 @@ ext {
             "junit"                    : 'junit:junit:4.12',
             "androidx.test:runner"     : 'androidx.test:runner:1.2.0',
             "androidx.test.espresso"   : 'androidx.test.espresso:espresso-core:3.2.0',
+            //ARouter 路由 ：https://github.com/alibaba/ARouter
             "arouter-api"              : 'com.alibaba:arouter-api:1.4.1',
             "arouter-compiler"         : 'com.alibaba:arouter-compiler:1.2.2'
     ]

@@ -1,4 +1,4 @@
-if(!isNeedFindModule.toBoolean()){
+if(isNeedFindModule.toBoolean()){
     apply plugin: 'com.android.application'
 }else {
     apply plugin: 'com.android.library'
@@ -8,9 +8,8 @@ android {
     compileSdkVersion 28
     buildToolsVersion "29.0.2"
 
-
     defaultConfig {
-        if(!isNeedFindModule.toBoolean()){
+        if(isNeedFindModule.toBoolean()){
             applicationId "com.brainbg.find"
         }
 
@@ -40,13 +39,6 @@ android {
 }
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
-
-    testImplementation rootProject.ext.dependencies["junit"]
-    androidTestImplementation rootProject.ext.dependencies["androidx.test:runner"]
-    androidTestImplementation rootProject.ext.dependencies["androidx.test.espresso"]
-
     implementation project(path: ':lib:common')
-
     annotationProcessor rootProject.ext.dependencies["arouter-compiler"]
 }

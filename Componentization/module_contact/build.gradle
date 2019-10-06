@@ -1,4 +1,4 @@
-if(!isNeedContactModule.toBoolean()){
+if(isNeedContactModule.toBoolean()){
     apply plugin: 'com.android.application'
 }else {
     apply plugin: 'com.android.library'
@@ -10,7 +10,7 @@ android {
 
 
     defaultConfig {
-        if(!isNeedContactModule.toBoolean()){
+        if(isNeedContactModule.toBoolean()){
             applicationId "com.brainbg.contact"
         }
 
@@ -40,12 +40,6 @@ android {
 }
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
-
-    testImplementation rootProject.ext.dependencies["junit"]
-    androidTestImplementation rootProject.ext.dependencies["androidx.test:runner"]
-    androidTestImplementation rootProject.ext.dependencies["androidx.test.espresso"]
-
     implementation project(path: ':lib:common')
     annotationProcessor rootProject.ext.dependencies["arouter-compiler"]
 }

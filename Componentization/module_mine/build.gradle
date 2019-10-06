@@ -1,4 +1,4 @@
-if (!isNeedMineModule.toBoolean()) {
+if (isNeedMineModule.toBoolean()) {
     apply plugin: 'com.android.application'
 } else {
     apply plugin: 'com.android.library'
@@ -10,7 +10,7 @@ android {
 
 
     defaultConfig {
-        if (!isNeedMineModule.toBoolean()) {
+        if (isNeedMineModule.toBoolean()) {
             applicationId "com.brainbg.mine"
         }
 
@@ -40,13 +40,6 @@ android {
 }
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
-
-    testImplementation rootProject.ext.dependencies["junit"]
-    androidTestImplementation rootProject.ext.dependencies["androidx.test:runner"]
-    androidTestImplementation rootProject.ext.dependencies["androidx.test.espresso"]
-
     implementation project(path: ':lib:common')
-
     annotationProcessor rootProject.ext.dependencies["arouter-compiler"]
 }
