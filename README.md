@@ -24,9 +24,10 @@ git checkout 分支名
 ```
 
 
-![](https://gitee.com/Brain-RD/BlogPic/raw/master/ABC/image-20210214224249144.png)
+![](https://gitee.com/Brain-RD/BlogPic/raw/master/ABC/20210214224554.png)
 
-![](https://gitee.com/Brain-RD/BlogPic/raw/master/ABC/20210214224407.png)
+
+
 ## 介绍
 > 作者：Brainbg(白雨)  
 > GitHub：https://github.com/Brainbg   
